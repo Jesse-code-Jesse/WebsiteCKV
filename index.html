@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unity In Chaos - Hardcore Festival</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+    }
+
+    body {
+      background: black;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ff004f;
+      text-shadow: 0 0 20px #ff004f;
+    }
+
+    .laser-background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: radial-gradient(circle, rgba(255,0,79,0.4), transparent 70%),
+                  radial-gradient(circle at 30% 30%, rgba(0,255,255,0.3), transparent 70%),
+                  radial-gradient(circle at 70% 70%, rgba(0,255,0,0.3), transparent 70%);
+      animation: lasers 5s infinite linear;
+    }
+
+    @keyframes lasers {
+      0% { background-position: 0 0, 30% 30%, 70% 70%; }
+      100% { background-position: 100% 100%, 40% 40%, 80% 80%; }
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 0, 79, 0.5);
+    }
+
+    h2 {
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+
+    button {
+      background-color: #ff004f;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #cc003f;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="laser-background"></div>
+
+  <header>
+    <h1>Unity In Chaos</h1>
+    <p>Hardcore Festival voor medewerkers van De Beren</p>
+  </header>
+
+  <div class="container">
+    <h2>Festivalinformatie</h2>
+    <ul>
+      <li><strong>Datum:</strong> 3 juli</li>
+      <li><strong>Tijd:</strong> 14:00 tot 00:00</li>
+      <li><strong>Locatie parkeerplaats:</strong> Stappegoor Tilburg</li>
+    </ul>
+
+    <h2>Foodtrucks</h2>
+    <ul>
+      <li>Friet</li>
+      <li>Hamburgers</li>
+      <li>Pizza</li>
+    </ul>
+
+    <h2>Drinken</h2>
+    <ul>
+      <li>Heineken bier</li>
+      <li>Water</li>
+      <li>Frisdrank</li>
+    </ul>
+
+    <h2>Contactpersonen</h2>
+    <ul>
+      <li>Jesse: 06 - 49083808</li>
+      <li>Max: 06 - 41050196</li>
+      <li>Thomas: 06 - 19335822</li>
+      <li>Thijmen: 06 - 29462029</li>
+    </ul>
+
+    <h2>RSVP</h2>
+    <p>Laat ons weten of je erbij bent!</p>
+    <form action="#" method="post">
+      <input type="text" name="naam" placeholder="Je naam" required>
+      <input type="email" name="email" placeholder="Je e-mailadres" required>
+      <textarea name="bericht" placeholder="Eventuele opmerkingen"></textarea>
+      <button type="submit">Verstuur</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Unity In Chaos Festival. Alleen voor personeel van De Beren.
+  </footer>
+</body>
+</html>
